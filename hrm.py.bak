@@ -27,9 +27,9 @@ class HRMonitor:
 
         try:
             self.hrm = btle.Peripheral(mac)
-            print("Connected to device")
+            print "Connected to device"
         except:
-            print("Could not connect")
+            print "Could not connect"
         self.configure()
 
 
@@ -55,10 +55,10 @@ class HRMonitor:
             self.hrm.setDelegate(HRMMNotificationsDelegate())
             self.t0 = time.time()
 
-            print("Ready to receive")
+            print "Ready to receive"
 
         except:
-            print("Could not initialize")
+            print "Could not initialize"
             self.hrm.disconnect()
 
 
@@ -88,7 +88,7 @@ def readAndPlot(polar, n):
     y = list()
     for i in range(n):
         hr = polar.readHR()
-        print("[%.2f]"%(hr[0]), hr[1])
+        print "[%.2f]"%(hr[0]), hr[1]
         x.append(hr[0])
         y.append(hr[1])
         plt.scatter(hr[0], hr[1])
