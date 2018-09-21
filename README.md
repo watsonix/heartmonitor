@@ -4,3 +4,4 @@ Uses Ian Harvey's bluepy project for dealing with ble (bluetooth low emission): 
 Device implementation largely based on his documentation and answers to this issue: https://github.com/IanHarvey/bluepy/issues/53
 
 
+[Note: Updated to Python 3, but does not play well with OSX. See: https://github.com/IanHarvey/bluepy/issues/44]
